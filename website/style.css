@@ -235,7 +235,7 @@ h2::after {
     display: flex;
     align-items: flex-start;
     gap: 24px;
-    min-height: 100vh;
+    min-height: auto;
 }
 
 .home-image {

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Next Level Gaming | Contact and Booking Quote</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="packages.html">Packages</a>
+            <a href="index.html" class="logo-link"><img src="Image/nlg_logo.png" class="logo-inline" alt="Next Level Gaming logo"></a>
+            <a href="about.html">About</a>
+            <a class="CurrentPage">Contact</a>
+        </nav>
+    </header>
+
+    <main class="booking-main">
+        <section class="booking-intro">
+            <p class="eyebrow">Contact and booking quote</p>
+            <h2>Plan Your Next Gaming Session</h2>
+            <p>Select one or more packages to create a quoted fee. A consultant can contact you to confirm availability and complete the booking.</p>
+        </section>
+
+        <form id="booking-calculator" class="booking-layout" novalidate>
+            <div class="booking-form-card">
+                <h3>Your Contact Details</h3>
+                <div class="form-field">
+                    <label for="customer-name">Name</label>
+                    <input type="text" id="customer-name" name="name" autocomplete="name" placeholder="Enter your full name" minlength="2" maxlength="60" aria-describedby="name-error" required>
+                    <small class="field-error" id="name-error"></small>
+                </div>
+                <div class="form-field">
+                    <label for="customer-phone">Phone number</label>
+                    <input type="tel" id="customer-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="e.g. 082 123 4567" minlength="10" maxlength="18" aria-describedby="phone-error" required>
+                    <small class="field-error" id="phone-error"></small>
+                </div>
+                <div class="form-field">
+                    <label for="customer-email">Email address</label>
+                    <input type="email" id="customer-email" name="email" autocomplete="email" inputmode="email" maxlength="120" placeholder="you@example.com" aria-describedby="email-error" required>
+                    <small class="field-error" id="email-error"></small>
+                </div>
+                <div class="form-field">
+                    <label for="venue-select">Preferred venue</label>
+                    <select id="venue-select" name="venue" aria-describedby="venue-error" required>
+                        <option value="">Select a venue</option>
+                        <option value="Johannesburg Arena">Johannesburg Arena</option>
+                        <option value="Sandton Gaming Lounge">Sandton Gaming Lounge</option>
+                    </select>
+                    <small class="field-error" id="venue-error"></small>
+                </div>
+
+                <fieldset class="course-list" id="course-fieldset">
+                    <legend>Choose your packages</legend>
+                    <label><input type="checkbox" name="course" value="Ultimate Gamer Pass|1500"> <span>Ultimate Gamer Pass</span> <strong>R1 500</strong></label>
+                    <label><input type="checkbox" name="course" value="VIP Gaming Experience|1500"> <span>VIP Gaming Experience</span> <strong>R1 500</strong></label>
+                    <label><input type="checkbox" name="course" value="Esports Training Package|1500"> <span>Esports Training Package</span> <strong>R1 500</strong></label>
+                    <label><input type="checkbox" name="course" value="Birthday Package|1500"> <span>Birthday Package</span> <strong>R1 500</strong></label>
+                    <label><input type="checkbox" name="course" value="Virtual Reality Experience|750"> <span>Virtual Reality Experience</span> <strong>R750</strong></label>
+                    <label><input type="checkbox" name="course" value="Racing Simulator Challenge|750"> <span>Racing Simulator Challenge</span> <strong>R750</strong></label>
+                    <label><input type="checkbox" name="course" value="Escape Room Challenge|750"> <span>Escape Room Challenge</span> <strong>R750</strong></label>
+                    <small class="field-error" id="course-error"></small>
+                </fieldset>
+                <div class="form-status" id="form-status" hidden></div>
+                <button class="btn-pill calculator-button" type="submit">Calculate Total Fee</button>
+            </div>
+
+            <aside class="quote-card" aria-live="polite">
+                <h3>Your Quote</h3>
+                <div class="quote-empty" id="quote-empty">Select packages to calculate your quoted fee.</div>
+                <table class="quote-table" id="quote-table" hidden>
+                    <thead><tr><th>Package</th><th>Fee</th></tr></thead>
+                    <tbody id="quote-items"></tbody>
+                    <tfoot>
+                        <tr><td>Subtotal</td><td id="quote-subtotal">R0</td></tr>
+                        <tr><td id="quote-discount-label">Discount (0%)</td><td id="quote-discount">-R0</td></tr>
+                        <tr><td>Amount after discount</td><td id="quote-after-discount">R0</td></tr>
+                        <tr><td>VAT (15%)</td><td id="quote-vat">R0</td></tr>
+                        <tr class="quote-total-row"><td>Total fee</td><td id="quote-total">R0</td></tr>
+                    </tfoot>
+                </table>
+                <p class="quote-note" id="quote-note" hidden>This is a quoted fee only and not a formal invoice.</p>
+            </aside>
+        </form>
+
+        <section class="contact-details">
+            <h3>Find Us</h3>
+            <table class="venue-table">
+                <thead><tr><th>Venue</th><th>Address</th><th>Contact</th><th>Directions</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td>Johannesburg Arena</td>
+                        <td>Johannesburg CBD, Johannesburg, South Africa</td>
+                        <td>011 123 4567<br>info@nextlevelgaming.co.za</td>
+                        <td><a href="https://www.google.com/maps/search/?api=1&amp;query=Johannesburg+CBD+South+Africa" target="_blank" rel="noopener noreferrer">View map</a></td>
+                    </tr>
+                    <tr>
+                        <td>Sandton Gaming Lounge</td>
+                        <td>Sandton City, Sandton, Johannesburg, South Africa</td>
+                        <td>011 123 4568<br>sandton@nextlevelgaming.co.za</td>
+                        <td><a href="https://www.google.com/maps/search/?api=1&amp;query=Sandton+City+Johannesburg" target="_blank" rel="noopener noreferrer">View map</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="contact-links">
+                <a href="tel:+27111234567">Call Johannesburg: 011 123 4567</a>
+                <a href="mailto:info@nextlevelgaming.co.za">info@nextlevelgaming.co.za</a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
+            </div>
+            <iframe class="venue-map" title="Map of Johannesburg venues" src="https://www.google.com/maps?q=Johannesburg+South+Africa&amp;output=embed" loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <footer class="contact-footer" aria-label="Site footer">
+        <div class="footer-container">
+            <section class="footer-column">
+                <h2 class="footer-heading">Copyright for Next Level Gaming</h2>
+                <p>&copy; 2026 Next Level Gaming Esports Area. All rights reserved.</p>
+            </section>
+
+            <nav class="footer-column" aria-label="Footer navigation">
+                <h2 class="footer-heading">Navigation Menu</h2>
+                <ul class="footer-links">
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="packages.html">Services &amp; Packages</a></li>
+                    <li><a class="CurrentPage">Contact Us</a></li>
+                    <li><a href="contact.html#booking-calculator">Enquiries</a></li>
+                </ul>
+            </nav>
+
+            <section class="footer-column">
+                <h2 class="footer-heading">Contact Information</h2>
+                <ul class="footer-contact">
+                    <li>Phone Number: <a href="tel:+27111234567">011 123 4567</a></li>
+                    <li>E-Mail: <a href="mailto:info@nextlevelgaming.co.za">info@nextlevelgaming.co.za</a></li>
+                    <li>Address: Johannesburg, South Africa</li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var form = document.getElementById("booking-calculator");
+            var table = document.getElementById("quote-table");
+            var empty = document.getElementById("quote-empty");
+            var quoteItems = document.getElementById("quote-items");
+            var currency = function (value) { return "R" + Math.round(value).toLocaleString("en-ZA"); };
+
+            function showError(id, message) {
+                document.getElementById(id).textContent = message;
+            }
+
+            function validate() {
+                var name = document.getElementById("customer-name").value.trim();
+                var phone = document.getElementById("customer-phone").value.trim();
+                var email = document.getElementById("customer-email").value.trim();
+                var venue = document.getElementById("venue-select").value;
+                var selected = Array.from(form.querySelectorAll("input[name='course']:checked"));
+                var valid = true;
+                var firstInvalid = null;
+
+                showError("name-error", "");
+                showError("phone-error", "");
+                showError("email-error", "");
+                showError("venue-error", "");
+                showError("course-error", "");
+                document.querySelectorAll(".form-field input, .form-field select").forEach(function (field) {
+                    field.setAttribute("aria-invalid", "false");
+                });
+                document.getElementById("course-fieldset").classList.remove("has-error");
+                document.getElementById("form-status").hidden = true;
+
+                if (!/^[\p{L}][\p{L}\p{M} .'-]{1,59}$/u.test(name)) {
+                    showError("name-error", "Please enter your name (letters, spaces, apostrophes, or hyphens).");
+                    document.getElementById("customer-name").setAttribute("aria-invalid", "true");
+                    firstInvalid = firstInvalid || document.getElementById("customer-name");
+                    valid = false;
+                }
+                var phoneDigits = phone.replace(/\D/g, "");
+                if (phoneDigits.length < 10 || phoneDigits.length > 15) {
+                    showError("phone-error", "Enter a valid phone number with 10 to 15 digits.");
+                    document.getElementById("customer-phone").setAttribute("aria-invalid", "true");
+                    firstInvalid = firstInvalid || document.getElementById("customer-phone");
+                    valid = false;
+                }
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    showError("email-error", "Enter a valid email address.");
+                    document.getElementById("customer-email").setAttribute("aria-invalid", "true");
+                    firstInvalid = firstInvalid || document.getElementById("customer-email");
+                    valid = false;
+                }
+                if (!venue) {
+                    showError("venue-error", "Select a preferred venue.");
+                    document.getElementById("venue-select").setAttribute("aria-invalid", "true");
+                    firstInvalid = firstInvalid || document.getElementById("venue-select");
+                    valid = false;
+                }
+                if (selected.length === 0) {
+                    showError("course-error", "Select at least one package.");
+                    document.getElementById("course-fieldset").classList.add("has-error");
+                    firstInvalid = firstInvalid || form.querySelector("input[name='course']");
+                    valid = false;
+                }
+                if (!valid && firstInvalid) {
+                    firstInvalid.focus();
+                }
+                return valid ? selected : null;
+            }
+
+            document.getElementById("customer-phone").addEventListener("blur", function () {
+                this.value = this.value.trim().replace(/\s+/g, " ");
+            });
+
+            form.querySelectorAll("input, select").forEach(function (field) {
+                field.addEventListener("input", function () {
+                    if (this.id && this.getAttribute("aria-invalid") === "true") {
+                        this.setAttribute("aria-invalid", "false");
+                        var errorId = this.id === "customer-name" ? "name-error" :
+                            this.id === "customer-phone" ? "phone-error" :
+                            this.id === "customer-email" ? "email-error" : "venue-error";
+                        showError(errorId, "");
+                    }
+                });
+                field.addEventListener("change", function () {
+                    if (this.name === "course") {
+                        showError("course-error", "");
+                        document.getElementById("course-fieldset").classList.remove("has-error");
+                    }
+                });
+            });
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                var selected = validate();
+                if (!selected) return;
+
+                var selection = [];
+                var subtotal = 0;
+                quoteItems.innerHTML = "";
+
+                selected.forEach(function (checkbox) {
+                    var parts = checkbox.value.split("|");
+                    var item = { name: parts[0], price: Number(parts[1]) };
+                    selection.push(item);
+                    subtotal += item.price;
+                    var row = document.createElement("tr");
+                    row.innerHTML = "<td>" + item.name + "</td><td>" + currency(item.price) + "</td>";
+                    quoteItems.appendChild(row);
+                });
+
+                var discountRate = 0;
+                if (selection.length <= 1) {
+                    discountRate = 0;
+                } else if (selection.length === 2) {
+                    discountRate = 0.05;
+                } else if (selection.length === 3) {
+                    discountRate = 0.10;
+                } else if (selection.length > 3) {
+                    discountRate = 0.15;
+                }
+
+                var discount = subtotal * discountRate;
+                var amountAfterDiscount = subtotal - discount;
+                var vat = amountAfterDiscount * 0.15;
+                var total = amountAfterDiscount + vat;
+
+                document.getElementById("quote-subtotal").textContent = currency(subtotal);
+                document.getElementById("quote-discount-label").textContent = "Discount (" + (discountRate * 100) + "%)";
+                document.getElementById("quote-discount").textContent = "-" + currency(discount);
+                document.getElementById("quote-after-discount").textContent = currency(amountAfterDiscount);
+                document.getElementById("quote-vat").textContent = currency(vat);
+                document.getElementById("quote-total").textContent = currency(total);
+                empty.hidden = true;
+                table.hidden = false;
+                document.getElementById("quote-note").hidden = false;
+                var status = document.getElementById("form-status");
+                status.textContent = "Quote ready - your selections have been saved for a consultant to review.";
+                status.hidden = false;
+
+                localStorage.setItem("nextLevelGamingQuote", JSON.stringify({
+                    contact: {
+                        name: document.getElementById("customer-name").value.trim(),
+                        phone: document.getElementById("customer-phone").value.trim(),
+                        email: document.getElementById("customer-email").value.trim(),
+                        venue: document.getElementById("venue-select").value
+                    },
+                    selection: selection,
+                    subtotal: subtotal,
+                    discount: discount,
+                    amountAfterDiscount: amountAfterDiscount,
+                    vat: vat,
+                    total: total,
+                    isQuote: true
+                }));
+            });
+        }());
+    </script>
+</body>
+</html>
